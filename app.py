@@ -274,7 +274,7 @@ for key, val in NORMAL_PRESET.items():
 
 def update_preset_values():
     selection = st.session_state.preset_selection
-    if selection == "Sample Normal (Row 0)":
+    if selection == "Sample Normal":
         target = NORMAL_PRESET
     elif selection == "Sample Attack":
         target = ATTACK_PRESET
@@ -316,7 +316,7 @@ model = load_model(model_options[selected_model_name])
 st.sidebar.subheader("Testing Presets")
 st.sidebar.radio(
     "Load Sample Data",
-    ("Manual Input", "Sample Normal (Row 0)", "Sample Attack"),
+    ("Manual Input", "Sample Normal", "Sample Attack"),
     key="preset_selection",
     on_change=update_preset_values
 )
