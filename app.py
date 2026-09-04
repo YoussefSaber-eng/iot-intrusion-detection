@@ -388,7 +388,6 @@ with tab2:
     st.subheader("Performance Metrics Across All Models")
     st.markdown("Comparison of Train vs. Test metrics for Accuracy, Precision, Recall, and F1-Score.")
 
-    # TODO: Replace these placeholder numbers with your actual metrics from your notebook training phase!
     metrics_data = [
         {"Model": "Random Forest",       "Dataset": "Train", "Accuracy": 0.99, "Precision": 0.99, "Recall": 0.99, "F1-Score": 0.99},
         {"Model": "Random Forest",       "Dataset": "Test",  "Accuracy": 0.97, "Precision": 0.96, "Recall": 0.97, "F1-Score": 0.96},
