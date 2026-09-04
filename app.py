@@ -6,9 +6,6 @@ from sklearn.linear_model import LogisticRegression
 
 st.set_page_config(page_title="IoT Intrusion Detection System", layout="wide")
 
-<<<<<<< HEAD
-st.logo("https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/300px-Samsung_Logo.svg.png")
-=======
 st.sidebar.image(
     "assets/samsung_logo.svg",
     width=150
@@ -237,7 +234,6 @@ button[data-baseweb="tab"][aria-selected="true"] {
 
 </style>
 """, unsafe_allow_html=True)
->>>>>>> 0115b29 (Style evaluation metrics table)
 
 st.title("IoT Intrusion Detection System")
 st.caption("AI-powered network traffic analysis and intrusion detection")
