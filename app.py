@@ -6,7 +6,7 @@ from sklearn.linear_model import LogisticRegression
 
 st.set_page_config(page_title="IoT Intrusion Detection System", layout="wide")
 
-st.logo("https://seeklogo.com/vector-logo/370356/samsung")
+st.logo("https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/300px-Samsung_Logo.svg.png")
 
 st.title("IoT Intrusion Detection System")
 st.caption("Pure feature input testing interface and performance evaluation dashboard.")
