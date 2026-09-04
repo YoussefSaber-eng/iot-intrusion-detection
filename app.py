@@ -6,10 +6,241 @@ from sklearn.linear_model import LogisticRegression
 
 st.set_page_config(page_title="IoT Intrusion Detection System", layout="wide")
 
+<<<<<<< HEAD
 st.logo("https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/300px-Samsung_Logo.svg.png")
+=======
+st.sidebar.image(
+    "assets/samsung_logo.svg",
+    width=150
+)
+
+st.markdown("""
+<style>
+
+/* =========================================================
+   SAMSUNG COLOR PALETTE
+   ========================================================= */
+
+:root {
+    --samsung-blue: #1428A0;
+    --samsung-input: #1738B8;
+    --samsung-dark: #0B1F66;
+    --white: #FFFFFF;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+section[data-testid="stSidebar"] {
+    background-color: #1428A0 !important;
+}
+
+/* Normal sidebar text */
+section[data-testid="stSidebar"] p,
+section[data-testid="stSidebar"] label,
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3 {
+    color: #FFFFFF !important;
+}
+
+
+/* =========================================================
+   SAMSUNG LOGO
+   ========================================================= */
+
+section[data-testid="stSidebar"] img {
+    filter: brightness(0) invert(1) !important;
+}
+
+
+/* =========================================================
+   MODEL SELECTION BOX
+   WHITE BOX + BLUE TEXT
+   ========================================================= */
+
+section[data-testid="stSidebar"]
+div[data-baseweb="select"] {
+    background-color: #FFFFFF !important;
+    border: 2px solid #FFFFFF !important;
+    border-radius: 10px !important;
+}
+
+/* Selected model text */
+section[data-testid="stSidebar"]
+div[data-baseweb="select"] span {
+    color: #1428A0 !important;
+}
+
+/* Selected model text — additional BaseWeb elements */
+section[data-testid="stSidebar"]
+div[data-baseweb="select"] div {
+    color: #1428A0 !important;
+}
+
+/* Arrow */
+section[data-testid="stSidebar"]
+div[data-baseweb="select"] svg {
+    color: #1428A0 !important;
+    fill: #1428A0 !important;
+}
+
+
+/* =========================================================
+   MODEL DROPDOWN
+   WHITE BACKGROUND + BLUE TEXT
+   ========================================================= */
+
+div[role="listbox"] {
+    background-color: #FFFFFF !important;
+}
+
+div[role="option"] {
+    background-color: #FFFFFF !important;
+    color: #1428A0 !important;
+}
+
+div[role="option"] * {
+    color: #1428A0 !important;
+}
+
+div[role="option"]:hover {
+    background-color: #E8ECFF !important;
+}
+
+
+/* =========================================================
+   RADIO BUTTONS
+   ========================================================= */
+
+section[data-testid="stSidebar"]
+div[role="radio"] {
+    color: #FFFFFF !important;
+    background-color: transparent !important;
+    border-radius: 10px !important;
+    padding: 8px 10px !important;
+    margin: 3px 0 !important;
+}
+
+section[data-testid="stSidebar"]
+div[role="radio"] * {
+    color: #FFFFFF !important;
+}
+
+/* Selected radio */
+section[data-testid="stSidebar"]
+div[role="radio"][aria-checked="true"] {
+    background-color: #0B1F66 !important;
+}
+
+
+/* =========================================================
+   NUMBER INPUTS
+   BLUE BOX + WHITE TEXT
+   ========================================================= */
+
+div[data-testid="stNumberInput"]
+div[data-baseweb="input"] {
+    background-color: #1738B8 !important;
+    border: 2px solid #1428A0 !important;
+    border-radius: 10px !important;
+}
+
+div[data-testid="stNumberInput"] input {
+    background-color: #1738B8 !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
+
+
+/* =========================================================
+   + / - BUTTONS
+   ========================================================= */
+
+div[data-testid="stNumberInput"] button {
+    background-color: #0B1F66 !important;
+    color: #FFFFFF !important;
+    border: none !important;
+}
+
+div[data-testid="stNumberInput"] button svg {
+    color: #FFFFFF !important;
+    fill: #FFFFFF !important;
+}
+
+
+/* =========================================================
+   INPUT LABELS
+   ========================================================= */
+
+div[data-testid="stNumberInput"] label {
+    color: #1428A0 !important;
+    font-weight: 600 !important;
+}
+
+
+/* =========================================================
+   PAGE TITLE
+   ========================================================= */
+
+h1 {
+    color: #1428A0 !important;
+}
+
+
+/* =========================================================
+   TABS
+   ========================================================= */
+
+button[data-baseweb="tab"] {
+    font-weight: 600 !important;
+}
+
+button[data-baseweb="tab"][aria-selected="true"] {
+    color: #1428A0 !important;
+}
+/* =========================================================
+   PERFORMANCE METRICS TABLE
+   ========================================================= */
+
+.metrics-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.metrics-table th {
+    background-color: #0B1F66 !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    padding: 12px !important;
+}
+
+.metrics-table td {
+    background-color: #1738B8 !important;
+    color: #FFFFFF !important;
+    text-align: center !important;
+    padding: 12px !important;
+    border-top: 1px solid #1428A0 !important;
+}
+
+.metrics-table tbody tr:hover td {
+    background-color: #1428A0 !important;
+}
+
+</style>
+""", unsafe_allow_html=True)
+>>>>>>> 0115b29 (Style evaluation metrics table)
 
 st.title("IoT Intrusion Detection System")
-st.caption("Pure feature input testing interface and performance evaluation dashboard.")
+st.caption("AI-powered network traffic analysis and intrusion detection")
 
 # -----------------------------------------------------------------------------
 # 1. Preset Values Definition
@@ -177,5 +408,11 @@ with tab2:
 
     metrics_df = pd.DataFrame(metrics_data)
 
-    # Display as a clean interactive table in Streamlit
-    st.dataframe(metrics_df, use_container_width=True, hide_index=True)
+    # Convert the DataFrame to an HTML table
+    table_html = metrics_df.to_html(
+        index=False,
+        classes="metrics-table",
+        border=0
+    )
+
+    st.markdown(table_html, unsafe_allow_html=True)
